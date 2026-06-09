@@ -16,7 +16,7 @@ export const Footer = () => (
         </ul>
       </div>
       <div>
-        <h4 className="font-bold mb-4">Kontak</h4>
+        <h4 className="font-bold mb-4">Contact</h4>
         <ul className="text-slate-400 text-sm space-y-2">
           <li>support@brandku.com</li>
           <li>Jakarta, Indonesia</li>
