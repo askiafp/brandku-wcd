@@ -1,19 +1,27 @@
-import { Header } from './components/Header';
-import { Hero } from './components/Hero';
-import CardGrid from './components/CardGrid'; 
-import { Footer } from './components/Footer';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-function App() {
+import Header from './components/Header';
+import Footer from './components/Footer'; 
+import About from "./components/About";
+import Home from "./components/Home";
+import HomePage from "./pages/HomePage";
+import LoginPage from "./pages/LoginPage";
+import PricingPage from "./pages/PricingPage";
+
+const App = () => {
   return (
-    <div className="bg-white text-slate-900 min-h-screen">
+    <BrowserRouter>
       <Header />
-      <main>
-        <Hero />
-        <CardGrid /> 
-      </main>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<HomePage />} />
+        <Route path="/tentang" element={<About/>} />
+        <Route path="/pricing" element={<PricingPage />} />
+        <Route path="/login" element={<LoginPage />} />
+      </Routes>
       <Footer />
-    </div>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;
